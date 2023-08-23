@@ -72,5 +72,5 @@ The Dockerfile guides Docker image creation, with steps such as:
 The Jenkinsfile streamlines deployment with:
 
 1. Build: Construct the Docker image, tagging it with the ECR repository's URL.
-2. Push: Propagate the Docker image to the ECR repository.
+2. Push: Send the Docker image to the ECR repository.
 3. Deploy: Helm updates the deployment with the Helm chart from the helm folder.
