@@ -15,7 +15,7 @@ resource "aws_network_interface" "interface" {
   subnet_id       = "subnet-03e6289b7b37451da"
   security_groups = [aws_security_group.allow_tls.id] #Addind security group for to allow Jenkins traffic for port 8080 and port 30000 for the application.
 }
-# Creating our AWS ec2 Instance.
+# Creating our AWS EC2 Instance and installing software on it.
 resource "aws_instance" "ec2" {
   depends_on           = [aws_network_interface.interface]
   ami                  = data.aws_ami.amazon-linux-2.id

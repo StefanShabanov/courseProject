@@ -1,3 +1,4 @@
+# Creating security groups
 resource "aws_security_group" "allow_tls" {
   name        = "allow-jenkins"
   description = "Allow Jenkins inbound traffic"
