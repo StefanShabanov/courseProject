@@ -74,25 +74,3 @@ The Jenkinsfile streamlines deployment with:
 1. Build: Construct the Docker image, tagging it with the ECR repository's URL.
 2. Push: Propagate the Docker image to the ECR repository.
 3. Deploy: Helm updates the deployment with the Helm chart from the helm folder.
-
-## Detailed Usage Instructions
-
-1. GitHub Account Setup
-- Create a GitHub account if needed.
-- Generate SSH keys and link your GitHub account for secure communication.
-
-2. Terraform Infrastructure Setup
-- Customize Terraform files (ec2.tf, ecr.tf, role.tf, sg.tf).
-- Execute terraform init and terraform apply to construct AWS infrastructure.
-
-3. Application Deployment Configuration
-- Personalize Helm chart files (chart.yaml, values.yaml) in the helm folder.
-- Develop a Dockerfile in your project's root to containerize the Flask app.
-
-4. Jenkins Automation
-- Set up a multi-branch pipeline job in Jenkins.
-- Associate the pipeline with your GitHub repository, utilizing the provided Jenkinsfile.
-
-5. Access Deployed Application
-- Following a triumphant Jenkins pipeline run, your Flask app adorns Kubernetes.
-- Revel in your creation by accessing the app at: http://<EC2_IP>:30000.
