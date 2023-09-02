@@ -1,3 +1,4 @@
+# Define the required provider for AWS with the specified version
 terraform {
   required_providers {
     aws = {
@@ -7,9 +8,7 @@ terraform {
   }
 }
 
+# Configure the AWS provider with the desired region
 provider "aws" {
   region = "eu-central-1"
 }
-
-
-# Search in Google "AWS Provider terraform" and open the first link, then click on Use provider and copy the text. Then on line 11 put region="your region"
