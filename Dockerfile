@@ -1,3 +1,4 @@
+#Building the application
 FROM python:3.10.10-bullseye
 
 RUN mkdir /app/

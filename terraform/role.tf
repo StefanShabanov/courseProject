@@ -1,4 +1,4 @@
-# Creating the AWS IAM Role for Kubernetes and allowing EC2 instances to assume this role.
+# Creating the AWS IAM Role for Kubernetes and allowing EC2 instances to assume this role and use it.
 resource "aws_iam_role" "role" {
   name               = "k8s-role-project"
   assume_role_policy = <<EOF

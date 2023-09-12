@@ -51,7 +51,7 @@ resource "aws_instance" "ec2" {
     sudo mv ./kind /usr/local/bin/kind
     aws s3 cp s3://${var.bucketname}/kind.yaml /var/lib/jenkins/
     kind create cluster --config=/var/lib/jenkins/kind.yaml
-    mkdir -p /var/lib/jenkins/.kube/
+    mkdir -p /var/lib/jenkins/.kube/   ##Creating kube directory so we can give credentials for k8s and give access to the cluster.##
     kind get kubeconfig --name=kind > /var/lib/jenkins/.kube/config 
     chown -R jenkins: /var/lib/jenkins/.kube/
 EOF
@@ -64,3 +64,4 @@ EOF
     Name = "Jenkins"
   }
 }
+#Attaching our role to the EC2 VM and granting Jenkins access to AWS.
